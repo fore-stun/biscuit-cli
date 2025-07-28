@@ -95,7 +95,7 @@ jobs:
             rust: nightly
             target: x86_64-apple-darwin
           - build: win-msvc
-            os: windows-2019
+            os: windows-2025
             rust: nightly
             target:
               x86_64-pc-windows-msvc
@@ -174,7 +174,7 @@ jobs:
           #cp "$outdir"/{rg.bash,rg.fish,_rg.ps1} "$staging/complete/"
           #cp complete/_rg "$staging/complete/"
 
-          if [ "${{ matrix.os }}" = "windows-2019" ]; then
+          if [ "${{ matrix.os }}" = "windows-2025" ]; then
             cp "target/${{ matrix.target }}/release/biscuit.exe" "$staging/"
             7z a "$staging.zip" "$staging"
             echo "ASSET=$staging.zip" >> $GITHUB_ENV
